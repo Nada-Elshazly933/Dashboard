@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="./Css/main.css" />
+    <link rel="stylesheet" href="./Css/normalize.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poltawski+Nowy:ital,wght@0,400..700;1,400..700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="Header">
+      <div class="containar">
+        <a href="index.html">
+          <img class="logo" src="./images/logo.svg" alt="logo" />
+        </a>
+
+        <div class="header-right">
+          <!-- notification -->
+          <a href="#detailes" class="notification">
+            <img src="icons/Notificationblue.svg" alt=""></i>
+          </a>
+
+          <div id="detailes" class="notice">
+            <a href="#" class="close">&times;</a>
+            <h3>Notifications</h3>
+            <div class="tabs">
+              <button class="active">Unread</button>
+              <button>All</button>
+            </div>
+            <div class="notification-item unread">
+              <img src="images/picture.svg" alt="user" />
+              <div class="content">
+                <p>
+                  <strong>Paul Svensson</strong> invite you to
+                  <strong>Prototyping </strong>
+                  <small>9h ago</small>
+                </p>
+              </div>
+            </div>
+            <div class="notification-item unread">
+              <img src="images/picture.svg" alt="user" />
+              <div class="content">
+                <p>
+                  <strong>Paul Svensson</strong> invite you to
+                  <strong>Prototyping </strong>
+                  <small>9h ago</small>
+                </p>
+              </div>
+            </div>
+            <div class="notification-item unread">
+              <img src="images/picture.svg" alt="user" />
+              <div class="content">
+                <p>
+                  <strong>Paul Svensson</strong> invite you to
+                  <strong>Prototyping </strong>
+                  <small>9h ago</small>
+                </p>
+              </div>
+            </div>
+            <div class="notification-item unread">
+              <img src="images/picture.svg" alt="user" />
+              <div class="content">
+                <p>
+                  <strong>Paul Svensson</strong> invite you to
+                  <strong>Prototyping </strong>
+                  <small>9h ago</small>
+                </p>
+              </div>
+            </div>
+
+            <a href="#" class="view-notifications">View all <img src="icons/Right arrowblue.svg" alt=""> </a>
+          </div>
+          <!-- calender -->
+          <div class="calendar" tabindex="0">
+            <label for="pick-date" class="icon-btn">
+              <img src="icons/Calendarblue.svg" alt=""></i>
+            </label>
+            <input type="date" id="pick-date" />
+          </div>
+          <!-- admain picture -->
+          <a href="#info">
+            <img src="images/picture.svg" alt="admain" class="person-pic" />
+          </a>
+          <div id="info" class="modal">
+            <div class="modal-content">
+              <a href="#" class="close">&times;</a>
+              <div class="persone-info">
+                <img src="images/picture.svg" alt="" />
+                <div class="title">
+                  <h4>Jenny Wilson</h4>
+                  <p class="job">Web-Developer</p>
+                </div>
+              </div>
+              <hr />
+
+              <p><strong>Role:</strong> Admin</p>
+              <p><strong>Email:</strong> Jenny@example.com</p>
+              <p><strong>Phone:</strong> +20 123 456 7890</p>
+              <p><strong>Address:</strong> Cairo, Egypt</p>
+              <p>
+                <strong>About:</strong> Passionate about creating user-friendly
+                websites and apps. Skilled in frontend & backend development
+                with strong leadership qualities.
+              </p>
+            </div>
+          </div>
+          <!-- admain view button -->
+          <button class="view-button">Admain View</button>
+        </div>
+      </div>
+    </header>
+    <!-- Navigation Menu -->
+    <nav>
+      <ul>
+        <li class="active">
+          <a href="index.html" class="active"><img src="icons/Dashboard.svg" alt=""> Dashboard</a
+          >
+        </li>
+        <li>
+          <a href="html/projects.html"><img src="icons/Projectsblue.svg" alt=""> Projects</a
+          >
+        </li>
+        <li>
+          <a href="html/analysis.html">
+            <img src="icons/Analysisblue.svg" alt=""> Analysis
+          </a>
+        </li>
+        <li>
+          <a href="html/setting.html"><img src="icons/Settingsblue.svg" alt=""> Settings</a>
+        </li>
+      </ul>
+      
+      <a href="#logout" class="logout-btn"> <img src="icons/logout.svg" alt=""> Logout</a>
+      <div id="logout" class="popup">
+        <div class="popup-content">
+          <a href="#" class="close">&times;</a>
+          <img src="icons/logout.svg" alt="">
+          <h3>Are you sure you want to logout?</h3>
+          <p>You will need to login again to access your dashboard.</p>
+          <div class="buttons">
+            <a href="#" class="cancel-btn">Cancel</a>
+            <a href="html/login.html" class="confirm">Yes,Logout</a>
+        </div>
+      </div>
+    </nav>
+  </body>
+</html>
