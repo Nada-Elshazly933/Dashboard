@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="../Css/projects.css" />
+    <link rel="stylesheet" href="./Css/normalize.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poltawski+Nowy:ital,wght@0,400..700;1,400..700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="Header">
+      <div class="containar">
+        <a href="index.html">
+          <img class="logo" src="../images/logo.svg" alt="logo" />
+        </a>
+
+        <div class="header-right">
+          <!-- notification -->
+          <a href="#detailes" class="notification">
+            <img src="../icons/Notificationblue.svg" alt="">
+          </a>
+
+          <div id="detailes" class="notice">
+            <a href="#" class="close">&times;</a>
+            <h3>Notifications</h3>
+            <div class="tabs">
+              <button class="active2">Unread 4</button>
+              <button>All</button>
+            </div>
+            <div class="notification-item unread">
+              <img src="../images/picture.svg" alt="user" />
+              <div class="content">
+                <p>
+                  <strong>Project E-commerce App </strong><small>has reached</small> <strong>80% completion</strong>
+                  <small>9h ago</small>
+                </p>
+              </div>
+            </div>
+            <div class="notification-item unread">
+              <img src="../images/picture.svg" alt="user" />
+              <div class="content">
+                <p>
+                  <strong>Ahmed</strong> uploaded new files to
+                  <strong>Landing Page Project </strong>
+                  <small>11h ago</small>
+                </p>
+              </div>
+            </div>
+            <div class="notification-item unread">
+              <img src="../images/picture.svg" alt="user" />
+              <div class="content">
+                <p>
+                  <strong>Deadline approaching</strong> Payment Integration Module due
+                  <strong>in 2 days </strong>
+                  <small>15h ago</small>
+                </p>
+              </div>
+            </div>
+            <div class="notification-item unread">
+              <img src="../images/picture.svg" alt="user" />
+              <div class="content">
+                <p>
+                  <strong>Client feedback</strong> added for
+                  <strong>HR Management System</strong>
+                  <small>20h ago</small>
+                </p>
+              </div>
+            </div>
+
+            <a href="#" class="view-notifications">View all <img src="../icons/Right arrowblue.svg" alt=""> </a>
+          </div>
+          <!-- calender -->
+          <div class="calendar" tabindex="0">
+            <img src="../icons/Calendarblue.svg" alt="Calendar" />
+            <input type="date" id="pick-date" />
+          </div>
+          <!-- admain picture -->
+          <a href="#info">
+            <img src="../images/picture.svg" alt="admain" class="person-pic" />
+          </a>
+          <div id="info" class="modal">
+            <div class="modal-content">
+              <a href="#" class="close">&times;</a>
+              <div class="persone-info">
+                <img src="../images/picture.svg" alt="" />
+                <div class="title2">
+                  <h4>Jenny Wilson</h4>
+                  <p class="job">Web-Developer</p>
+                </div>
+              </div>
+              <hr />
+              
+              <p><strong>Role:</strong> Admin</p>
+              <p><strong>Email:</strong> Jenny@example.com</p>
+              <p><strong>Phone:</strong> +20 123 456 7890</p>
+              <p><strong>Address:</strong> Cairo, Egypt</p>
+              <p>
+                <strong>About:</strong> Passionate about creating user-friendly
+                websites and apps. Skilled in frontend & backend development
+                with strong leadership qualities.
+              </p>
+            </div>
+          </div>
+          <!-- admain view button -->
+          <button class="view-button">Admain View</button>
+        </div>
+      </div>
+    </header>
+    <!-- Navigation Menu -->
+    <nav>
+      <ul>
+        <li >
+          <a href="/index.html" ><img src="../icons/Dashboardblue.svg" alt=""> Dashboard</a
+          >
+        </li>
+        <li class="active">
+          <a href="html/projects.html" class="active"><img src="../icons/Projects.svg" alt=""> Projects</a
+          >
+        </li>
+        <li>
+          <a href="html/analysis.html">
+            <img src="../icons/Analysisblue.svg" alt=""> Analysis
+          </a>
+        </li>
+        <li>
+          <a href="html/setting.html"><img src="../icons/Settingsblue.svg" alt=""> Settings</a>
+        </li>
+      </ul>
+      
+      <a href="#logout" class="logout-btn"> <img src="../icons/logout.svg" alt=""> Logout</a>
+      <div id="logout" class="popup">
+        <div class="popup-content">
+          <a href="#" class="close">&times;</a>
+          <img src="../icons/logout.svg" alt="">
+          <h3>Are you sure you want to logout?</h3>
+          <p>You will need to login again to access your dashboard.</p>
+          <div class="buttons">
+            <a href="#" class="cancel-btn">Cancel</a>
+            <a href="html/login.html" class="confirm">Yes,Logout</a>
+        </div>
+      </div>
+    </nav>
+    <!-- Main Content -->
+    <main>
+        <div class="main-containar">
+            <h2>Projects</h2>
+            <div class="search-container">
+                <input type="text" placeholder="Search projects..." />
+                <img src="../icons/search.svg" alt="">
+                
+            </div>
+        </div>
+        <section class="overview">
+            <div class="jobs">
+                <h4>Overview</h4>
+                <p>Projects by Department</p>
+                <img src="../images/jops-color.svg" alt="" class="charttt color">
+
+            </div>
+            <div class="jobs">
+                <h4>Number of projects per year</h4>
+                <img src="../images/chart-two.svg" alt="" class="charttt">
+            </div>
+        </section>
+
+        <section class="projects-list">
+            <h3>Projects List</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Project Name</th>
+                        <th>Department</th>
+                        <th>Start Date</th>
+                        <th>End Date</th>
+                        <th>Status</th>
+                        <th>Progress</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Website Redesign</td>
+                        <td>Marketing</td>
+                        <td>2023-01-15</td>
+                        <td>2023-06-30</td>
+                        <td><span class="status in-progress">In Progress</span></td>
+                        <td>
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 65%;"></div>
+                            </div>
+                            65%
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Mobile App Development</td>
+                        <td>Development</td>
+                        <td>2023-02-01</td>
+                        <td>2023-12-31</td>
+                        <td><span class="status on-hold">On Hold</span></td>
+                        <td>
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 40%;"></div>
+                            </div>
+                            40%
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Cloud Migration</td>
+                        <td>IT</td>
+                        <td>2023-03-10</td>
+                        <td>2023-09-30</td>
+                        <td><span class="status completed">Completed</span></td>
+                        <td>
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 100%;"></div>
+                            </div>
+                            100%
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Customer Feedback System</td>
+                        <td>Support</td>
+                        <td>2023-04-05</td>
+                        <td>2023-10-15</td>
+                        <td><span class="status in-progress">In Progress</span></td>
+                        <td>
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 75%;"></div>
+                            </div>
+                            75%
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Data Analytics Platform</td>
+                        <td>Analytics</td>
+                        <td>2023-05-20</td>
+                        <td>2024-01-31</td>
+                        <td><span class="status in-progress">In Progress</span></td>
+                        <td>
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 55%;"></div>
+                            </div>
+                            55%
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Security Enhancement</td>
+                        <td>IT</td>
+                        <td>2023-06-15</td>
+                        <td>2023-11-30</td>
+                        <td><span class="status on-hold">On Hold</span></td>
+                        <td>
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 30%;"></div>
+                            </div>
+                            30%
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+        
+            
+    </main>
+
+    <!-- <footer>&copy; 2025 <img src="./images/logo.svg" alt="">. All rights reserved.</footer> -->
+  </body>
+</html>
