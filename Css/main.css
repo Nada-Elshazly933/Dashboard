@@ -1,6 +1,7 @@
 /* start global styles */
 body {
   font-family: "Poltawski Nowy", serif;
+  background-color: var(--backgroundTwo);
 }
 * {
   -webkit-box-sizing: border-box;
@@ -22,6 +23,7 @@ body {
 /* End global styles */
 
 /* start header styles */
+
 .Header {
   background-color: var(--background);
   padding: 8px 16px;
@@ -40,10 +42,11 @@ body {
 }
 .header-right {
   display: flex;
+  /* align-items: center; */
   gap: 10px;
+  z-index: 66363387;
 }
-.notification,
-.calendar {
+.notification {
   width: 45px;
   height: 45px;
   background-color: var(--background);
@@ -57,7 +60,46 @@ body {
   position: relative;
   text-decoration: none;
 }
+.calendar {
+  width: 45px;
+  height: 45px;
+  background-color: var(--background);
+  color: var(--maincolor);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 1px 3px 10px var(--tertiary);
+  border: none;
+  position: relative;
+  cursor: pointer;
+}
 
+/* الإيقونة */
+.calendar img {
+  width: 24px;
+  height: 24px;
+  pointer-events: none; /* عشان الكليك يوصل للزر */
+}
+
+/* الـ input الأساسي (مخفي لكن شغال) */
+.calendar input[type="date"] {
+  position: absolute;
+  top: 55px; /* ينزل تحت الدايرة */
+  right: 0;
+  display: none;
+  background: #fff;
+  padding: 5px;
+  border: 1px solid var(--tertiary);
+  border-radius: 6px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+}
+
+/* لما الدايرة تاخد focus يظهر الـ date picker */
+.calendar:focus-within input[type="date"] {
+  display: block;
+}
 .notice {
   display: none;
   position: absolute;
@@ -68,6 +110,7 @@ body {
   padding: 15px;
   border-radius: 10px;
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  z-index: 181881;
 }
 .notice h3 {
   margin-bottom: 14px;
@@ -85,7 +128,7 @@ body {
   cursor: pointer;
   padding: 5px 10px;
 }
-.tabs button.active {
+.tabs button.active2 {
   color: var(--maincolor);
   border-bottom: 2px solid var(--maincolor);
 }
@@ -117,16 +160,7 @@ body {
 .notice:target {
   display: block;
 }
-#pick-date {
-  position: absolute;
-  top: 35px;
-  right: 0;
-  display: none;
-}
 
-.calendar:focus-within #pick-date {
-  display: block;
-}
 .person-pic {
   width: 45px;
   height: 45px;
@@ -137,7 +171,7 @@ body {
   padding-left: 8px;
   padding-right: 8px;
   background-color: var(--maincolor);
-  color: var(--secondary);
+  color: var(--backgroundTwo);
   border: none;
   border-radius: 12px;
   font-size: medium;
@@ -170,16 +204,18 @@ body {
   color: #333;
   font-weight: bold;
 }
+/* .active2::after {
+  content: " 4";
+} */
 #info:target {
   display: block;
 }
 .persone-info {
   display: flex;
   align-items: center;
-
   gap: 8px;
 }
-.title {
+.title2 {
   display: flex;
   flex-direction: column;
   gap: 6px;
@@ -189,6 +225,8 @@ div > h4 {
 }
 .job {
   margin: 0;
+  color: rgb(109, 109, 109);
+  font-size: medium;
 }
 div > img {
   width: 45px;
@@ -197,9 +235,9 @@ div > img {
 }
 div > hr {
   border: none;
-  height: 2px;
-  background-color: var(--tertiary);
-  margin: 6px auto;
+  height: 1px;
+  background-color: rgb(204, 203, 203);
+  margin: 10px auto;
 }
 /* End header styles */
 
@@ -208,10 +246,10 @@ div > hr {
 nav {
   background-color: var(--background);
   box-shadow: 1px 3px 40px var(--tertiary);
-  position: sticky;
-  width: 220px;
-  top: 70px;
-  height: calc(100vh - 70px);
+  position: fixed;
+  width: 200px;
+  top: 65px;
+  height: calc(100vh - 65px);
   padding-top: 20px;
   display: flex;
   justify-content: space-between;
@@ -321,3 +359,378 @@ a.active {
   display: block;
 }
 /* End navbar styles */
+/* start main content styles  */
+.title {
+  margin-left: 210px;
+  padding: 6px;
+}
+.title h2 {
+  margin: 10px 0 0 0;
+}
+.title p {
+  margin: 6px 0 16px 0;
+  color: rgb(109, 109, 109);
+  font-size: small;
+}
+.cards {
+  margin-left: 210px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 0 20px 20px 20px;
+  margin-bottom: 10px;
+  margin-top: 0;
+}
+.card {
+  background-color: rgb(255, 251, 251);
+  border-radius: 15px;
+  box-shadow: 3px 3px 10px var(--tertiary);
+  padding: 14px;
+  display: flex;
+  margin-top: 0;
+  justify-content: space-between;
+}
+.card-content {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.change {
+  font-size: medium;
+  color: rgb(109, 109, 109);
+}
+.progress-container {
+  width: 100%;
+  height: 10px;
+  background-color: #eee;
+  border-radius: 20px;
+  overflow: hidden;
+  margin-bottom: 8px;
+}
+.progress-bar {
+  height: 10px;
+  width: 70%; /* نسبة التقدم */
+  background-color: var(--maincolor);
+  margin-bottom: 20px;
+}
+.progress-value {
+  font-size: small;
+  color: rgb(109, 109, 109);
+  margin-top: 16px;
+}
+.team-details {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+.team {
+  background-color: #68c0f7;
+  color: var(--backgroundTwo);
+  padding: 4px 8px;
+  font-size: small;
+  border-radius: 6px;
+}
+.chart {
+  width: 160px;
+  height: 110px;
+}
+
+/* ################################## */
+
+.recent-projects {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 210px;
+  padding: 0 20px;
+  margin-top: 0;
+}
+.add-project {
+  background-color: var(--maincolor);
+  color: var(--backgroundTwo);
+  padding: 8px 16px;
+  border-radius: 12px;
+  font-size: medium;
+  cursor: pointer;
+  text-align: center;
+  box-shadow: 3px 3px 10px var(--tertiary);
+  display: inline-block;
+  text-decoration: none;
+}
+
+#toggle-form:checked ~ .form-container2 {
+  display: block;
+}
+.form-container2 {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.5);
+}
+.form-container2:target {
+  display: flex;
+}
+
+.project-form {
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  width: 400px;
+  max-width: 90%;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  position: relative;
+}
+
+.project-form h3 {
+  margin-top: 0;
+}
+
+.project-form input,
+.project-form textarea,
+.project-form select {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+/* زرار Close */
+.close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  text-decoration: none;
+  font-size: 24px;
+  color: #333;
+}
+
+.cancel-submit {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+
+.cancel-btn {
+  background: none;
+  border: 2px solid #df0303;
+  color: #df0303;
+  padding: 8px 15px;
+  border-radius: 5px;
+  text-decoration: none;
+  text-align: center;
+  cursor: pointer;
+}
+
+.submit-btn {
+  background: var(--maincolor);
+  color: #fff;
+  padding: 8px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: center;
+}
+
+/* ###################### */
+.all-projects {
+  margin-left: 210px;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+.project-card {
+  background-color: rgb(255, 251, 251);
+  border-radius: 15px;
+  box-shadow: 3px 3px 10px var(--tertiary);
+  padding: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  transition: all 0.3s ease;
+}
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 6px 6px 15px var(--tertiary);
+}
+.project-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 8px;
+}
+.project-image {
+  width: 100%;
+  max-width: fit-content;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 3px 3px 10px var(--tertiary);
+  /* object-fit: cover; */
+}
+.project-name {
+  font-size: large;
+  margin: 0;
+}
+.description {
+  color: rgb(109, 109, 109);
+  font-size: small;
+  margin: 0;
+}
+.date-range {
+  color: rgb(109, 109, 109);
+  font-size: small;
+  margin: 0;
+}
+.team-members {
+  display: flex;
+  flex-wrap: wrap;
+}
+.one {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  background-color: blueviolet;
+  color: rgb(237, 237, 237);
+  box-shadow: 3px 3px 10px var(--tertiary);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.two {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  background-color: rgb(7, 166, 174);
+  color: rgb(237, 237, 237);
+  box-shadow: 3px 3px 10px var(--tertiary);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.three {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  background-color: rgb(241, 206, 8);
+  color: rgb(237, 237, 237);
+  box-shadow: 3px 3px 10px var(--tertiary);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.status.active1 {
+  background-color: rgb(161, 229, 254);
+  color: rgb(43, 43, 43);
+  padding: 4px 6px;
+  border-radius: 6px;
+  font-size: small;
+}
+.status.active2 {
+  background-color: rgb(255, 170, 153);
+  color: rgb(43, 43, 43);
+  padding: 4px 6px;
+  border-radius: 6px;
+  font-size: small;
+}
+.status.active3 {
+  background-color: rgb(187, 255, 185);
+  color: rgb(43, 43, 43);
+  padding: 4px 6px;
+  border-radius: 6px;
+  font-size: small;
+}
+.members-details {
+  margin-left: 230px;
+  margin-right: 20px;
+}
+.actions {
+  display: flex;
+  gap: 10px;
+}
+.actions button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 8px 14px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  box-shadow: 3px 3px 10px var(--tertiary);
+}
+.addition {
+  background-color: var(--maincolor);
+  color: var(--backgroundTwo);
+}
+.export {
+  background-color: var(--backgroundTwo);
+  color: var(--maincolor);
+}
+.title-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+  margin-top: 10px;
+}
+.members-table {
+  width: 100%;
+  background-color: rgb(255, 251, 251);
+  box-shadow: 3px 3px 10px var(--tertiary);
+  border-radius: 10px;
+}
+table thead th {
+  background-color: var(--maincolor);
+  color: var(--backgroundTwo);
+  padding: 10px 20px;
+  border-spacing: 0;
+  border-radius: 10px 10px 0 0;
+}
+table td {
+  padding: 12px;
+  text-align: left;
+  border: 1px solid #eee;
+}
+td button {
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+.delete {
+  color: #ff5151;
+  font-weight: 700;
+}
+.member-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.member-info img {
+  width: 40px;
+  height: 40px;
+}
+.Best {
+  background-color: rgb(187, 255, 185);
+  color: rgb(43, 43, 43);
+  padding: 6px 12px;
+  border-radius: 8px;
+  font-size: small;
+}
+.Late {
+  background-color: rgb(255, 170, 153);
+  color: rgb(43, 43, 43);
+  padding: 6px 12px;
+  border-radius: 8px;
+  font-size: small;
+}
+/* End main content styles  */

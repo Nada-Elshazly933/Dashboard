@@ -24,22 +24,21 @@
         <div class="header-right">
           <!-- notification -->
           <a href="#detailes" class="notification">
-            <img src="icons/Notificationblue.svg" alt=""></i>
+            <img src="icons/Notificationblue.svg" alt="">
           </a>
 
           <div id="detailes" class="notice">
             <a href="#" class="close">&times;</a>
             <h3>Notifications</h3>
             <div class="tabs">
-              <button class="active">Unread</button>
+              <button class="active2">Unread 4</button>
               <button>All</button>
             </div>
             <div class="notification-item unread">
               <img src="images/picture.svg" alt="user" />
               <div class="content">
                 <p>
-                  <strong>Paul Svensson</strong> invite you to
-                  <strong>Prototyping </strong>
+                  <strong>Project E-commerce App </strong><small>has reached</small> <strong>80% completion</strong>
                   <small>9h ago</small>
                 </p>
               </div>
@@ -48,9 +47,9 @@
               <img src="images/picture.svg" alt="user" />
               <div class="content">
                 <p>
-                  <strong>Paul Svensson</strong> invite you to
-                  <strong>Prototyping </strong>
-                  <small>9h ago</small>
+                  <strong>Ahmed</strong> uploaded new files to
+                  <strong>Landing Page Project </strong>
+                  <small>11h ago</small>
                 </p>
               </div>
             </div>
@@ -58,9 +57,9 @@
               <img src="images/picture.svg" alt="user" />
               <div class="content">
                 <p>
-                  <strong>Paul Svensson</strong> invite you to
-                  <strong>Prototyping </strong>
-                  <small>9h ago</small>
+                  <strong>Deadline approaching</strong> Payment Integration Module due
+                  <strong>in 2 days </strong>
+                  <small>15h ago</small>
                 </p>
               </div>
             </div>
@@ -68,9 +67,9 @@
               <img src="images/picture.svg" alt="user" />
               <div class="content">
                 <p>
-                  <strong>Paul Svensson</strong> invite you to
-                  <strong>Prototyping </strong>
-                  <small>9h ago</small>
+                  <strong>Client feedback</strong> added for
+                  <strong>HR Management System</strong>
+                  <small>20h ago</small>
                 </p>
               </div>
             </div>
@@ -79,9 +78,7 @@
           </div>
           <!-- calender -->
           <div class="calendar" tabindex="0">
-            <label for="pick-date" class="icon-btn">
-              <img src="icons/Calendarblue.svg" alt=""></i>
-            </label>
+            <img src="icons/Calendarblue.svg" alt="Calendar" />
             <input type="date" id="pick-date" />
           </div>
           <!-- admain picture -->
@@ -93,13 +90,13 @@
               <a href="#" class="close">&times;</a>
               <div class="persone-info">
                 <img src="images/picture.svg" alt="" />
-                <div class="title">
+                <div class="title2">
                   <h4>Jenny Wilson</h4>
                   <p class="job">Web-Developer</p>
                 </div>
               </div>
               <hr />
-
+              
               <p><strong>Role:</strong> Admin</p>
               <p><strong>Email:</strong> Jenny@example.com</p>
               <p><strong>Phone:</strong> +20 123 456 7890</p>
@@ -150,5 +147,250 @@
         </div>
       </div>
     </nav>
+    <!-- Main Content -->
+    <main>
+      <div class="title">
+        <h2>Dashboard Overview</h2>
+        <p>Welcome back, Jenny! Here's what's happening with your projects.</p>
+      </div>
+      <!-- cards Section  -->
+      <div class="cards">
+        <div class="card">
+          <div class="card-content">
+            <h3>Total Projects</h3>
+            <p class="number">24</p>
+            <p class="change">+5% since last month</p>
+          </div>
+          <div class="card-icon">
+            <img src="./icons/proj.svg" alt="">
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-content">
+            <h3>complete Projects</h3>
+            <div class="progress-container">
+              <div class="progress-bar"></div>
+            </div>
+            <div class="progress-value">20 of 24</div>
+          </div>
+          <div class="card-icon">
+            <img src="./icons/complet.svg" alt="">
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-content">
+            <h3>Team</h3>
+            <p class="number">15 member</p>
+            <div class="team-details">
+              <div class="team one1">Leaders:4</div>
+              <div class="team two2">Developers:5</div>
+              <div class="team three3">Designers:3</div>
+              <div class="team four4">Marketing:3</div>
+            </div>
+          </div>
+          <div class="card-icon">
+            <img src="./icons/team.svg" alt="">
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-content">
+            <h3>Revenue</h3>
+            <p class="number">$125K</p>
+            <p class="change">+8% since last month</p>
+          </div>
+          <div class="card-icon">
+            <img src="./icons/resume.svg" alt="">
+          </div>
+        </div>
+        
+        </div>
+  
+    <!-- Recent Projects -->
+      <div class="recent-projects">
+        <h4>Recent Projects</h4>
+        <input type="checkbox" id="toggle-form" hidden>
+        <a href="#add-form" class="add-project">+ Add Project</a>   
+      </div>
+      <div  id="add-form" class="form-container2">
+        <form action="#" class="project-form">
+          <a href="#" class="close">&times;</a>
+          <h3>Add New Project</h3>
+          <label for="project-name">Project Name:</label>
+          <input type="text" id="project-name" name="project-name" required />
+  
+          <label for="description">Description:</label>
+          <textarea id="description" name="description" required></textarea>
+  
+          <label for="start-date">Start Date:</label>
+          <input type="date" id="start-date" name="start-date" required />
+  
+          <label for="end-date">End Date:</label>
+          <input type="date" id="end-date" name="end-date" required />
+
+          <label for="status">Project status:</label>
+          <select name="status" id="status" required>
+            <option value="state-one">Active</option>
+            <option value="state-two">In Progress</option>
+            <option value="state-three">Completed</option>
+            <option value="state-three">Not Started</option>
+          </select>
+  
+          <label for="team-members">Team Members:</label>
+          <select id="team-members" name="team-members" multiple required>
+            <option value="member1">Emma Johnson</option>
+            <option value="member2">David Miller</option>
+            <option value="member3">James Anderson</option>
+            <option value="member4">Sophia Taylor</option>
+            <option value="member5">Emily Clark</option>
+          </select>
+  
+          <div class="cancel-submit">
+            <a href="#" class="cancel-btn">Cancel</a>
+            <button type="submit" class="submit-btn">Add Project</button>
+          </div>
+        </form>
+      </div>
+
+      <!-- projects -->
+       <section class="all-projects">
+          <div class="project-card">
+            <img src="./images/Untitled design.svg" alt="" class="project-image">
+            <div class="project-header">
+              <h3 class="project-name">Website Redesign</h3>
+              <div class="status active1"> Active</div>
+            </div>
+            <p class="description">A complete overhaul of the company website to improve user experience and modernize the design.</p>
+            <p class="date-range">Jan 15, 2024 - Mar 30, 2024</p>
+            <div class="team-members">
+              <div class="one">EJ</div>
+              <div class="two">DM</div>
+              <div class="three">ST</div>
+            </div>
+          </div>
+          <div class="project-card">
+            <img src="./images/Untitled design (1).svg" alt=""  class="project-image">
+            <div class="project-header">
+              <h3 class="project-name" >Website Redesign</h3>
+              <div class="status active2"> Not Started</div>
+            </div>
+            <p class="description">A complete overhaul of the company website to improve user experience and modernize the design.</p>
+            <p class="date-range">Jan 15, 2024 - Mar 30, 2024</p>
+            <div class="team-members">
+              <div class="one">EJ</div>
+              <div class="two">DM</div>
+              <div class="three">ST</div>
+            </div>
+          </div>
+          <div class="project-card">
+            <img src="./images/Untitled design (2).svg" alt=""  class="project-image">
+            <div class="project-header">
+              <h3 class="project-name">Website Redesign</h3>
+              <div class="status active3"> Completed</div>
+            </div>
+            <p class="description">A complete overhaul of the company website to improve user experience and modernize the design.</p>
+            <p class="date-range">Jan 15, 2024 - Mar 30, 2024</p>
+            <div class="team-members">
+              <div class="one">EJ</div>
+              <div class="two">DM</div>
+              <div class="three">ST</div>
+            </div>
+          </div>
+       </section>
+       <section class="members-details">
+        <div class="title-actions">
+          <h4>Team Members</h4>
+          <div class="actions">
+            <button class="addition"><img src="./icons/add.svg" alt=""> Add Member</button>
+            <button class="export"> <img src="./icons/excel.svg" alt="">Export</button>
+          </div>
+        </div>
+         <table class="members-table" >
+            <thead>
+              <tr>
+                <th>Member</th>
+                <th>Role</th>
+                <th>Projects</th>
+                <th>Contact</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="member-info">
+                  <img src="./images/female1.svg" alt="member" />
+                  <span>Emma Johnson</span>
+                  
+                </td>
+                <td>Project Manager</td>
+                <td>3</td>
+                <td> +1 202-555-0147</td>
+                <td><button class="edit">✎ </button>
+                  <button class="delete">🗑 </button>
+                </td>
+              </tr>
+              <tr>
+                <td class="member-info">
+                  <img src="./images/mail1.svg" alt="member" />
+                  <span>David Miller</span>
+                  <span class="Best">High Score</span>
+                </td>
+                <td>Lead Developer</td>
+                <td>6</td>
+                <td> +61 2 9374 2100</td>
+                <td><button class="edit">✎ </button>
+                  <button class="delete">🗑 </button>
+                </td>
+              </tr>
+              <tr>
+                <td class="member-info">
+                  <img src="./images/mail2.svg" alt="member" />
+                  <span>James Anderson</span>
+                </td>
+                <td>UI/UX Designer</td>
+                <td>3</td>
+                <td> +91 98123 45678</td>
+                <td><button class="edit">✎ </button>
+                  <button class="delete">🗑 </button>
+                </td>
+              </tr>
+              <tr>
+                <td class="member-info">
+                  <img src="./images/female2.svg" alt="member" />
+                  <span>Sophia Taylor</span>
+                  <span class="Late">Late</span>
+                </td>
+                <td>Marketing Specialist</td>
+                <td>2</td>
+                <td> +1 202-555-0133</td>
+                <td><button class="edit">✎ </button>
+                  <button class="delete">🗑 </button>
+                </td>
+              </tr>
+              <tr>
+                <td class="member-info">
+                  <img src="./images/female3.svg" alt="member" />
+                  <span>Emily Clark</span>
+                </td>
+                <td>Backend Developer</td>
+                <td>4</td>
+                <td> +34 91 123 4567</td>
+                <td><button class="edit">✎ </button>
+                  <button class="delete">🗑 </button>
+                </td>
+              </tr>
+            </tbody>
+ 
+
+       </section>
+       <section>
+        <span></span>
+        <span></span>
+        <span></span>
+       </section>
+
+    </main>
+
+
+    <!-- <footer>&copy; 2025 <img src="./images/logo.svg" alt="">. All rights reserved.</footer> -->
   </body>
 </html>
