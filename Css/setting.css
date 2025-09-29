@@ -1,0 +1,659 @@
+/* start global styles */
+body {
+  font-family: "Poltawski Nowy", serif;
+  background-color: var(--backgroundTwo);
+}
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  --maincolor: #3396d3;
+  --secondary: #fff0ce;
+  --tertiary: #e4e4e4;
+  --background: rgb(247, 251, 255);
+  --backgroundTwo: #fafafa;
+}
+
+@media (min-width: 768px) {
+}
+@media (min-width: 992px) {
+}
+@media (min-width: 1200px) {
+}
+/* End global styles */
+
+/* start header styles */
+
+/* start login */
+
+/* end login  */
+.Header {
+  background-color: var(--background);
+  padding: 8px 16px;
+  margin: 0;
+  box-shadow: 1px 3px 40px var(--tertiary);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+.containar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo {
+  width: 90px;
+}
+.header-right {
+  display: flex;
+  /* align-items: center; */
+  gap: 10px;
+  z-index: 66363387;
+}
+.notification {
+  width: 45px;
+  height: 45px;
+  background-color: var(--background);
+  color: var(--maincolor);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 1px 3px 10px var(--tertiary);
+  border: none;
+  position: relative;
+  text-decoration: none;
+}
+.calendar {
+  width: 45px;
+  height: 45px;
+  background-color: var(--background);
+  color: var(--maincolor);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 1px 3px 10px var(--tertiary);
+  border: none;
+  position: relative;
+  cursor: pointer;
+}
+
+/* الإيقونة */
+.calendar img {
+  width: 24px;
+  height: 24px;
+  pointer-events: none; /* عشان الكليك يوصل للزر */
+}
+
+/* الـ input الأساسي (مخفي لكن شغال) */
+.calendar input[type="date"] {
+  position: absolute;
+  top: 55px; /* ينزل تحت الدايرة */
+  right: 0;
+  display: none;
+  background: #fff;
+  padding: 5px;
+  border: 1px solid var(--tertiary);
+  border-radius: 6px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+}
+
+/* لما الدايرة تاخد focus يظهر الـ date picker */
+.calendar:focus-within input[type="date"] {
+  display: block;
+}
+.notice {
+  display: none;
+  position: absolute;
+  right: 20px;
+  top: 70px;
+  background: #fff;
+  width: 320px;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  z-index: 181881;
+}
+.notice h3 {
+  margin-bottom: 14px;
+}
+
+.tabs {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+.tabs button {
+  border: none;
+  background: none;
+  font-weight: bold;
+  cursor: pointer;
+  padding: 5px 10px;
+}
+.tabs button.active2 {
+  color: var(--maincolor);
+  border-bottom: 2px solid var(--maincolor);
+}
+.notification-item img {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+}
+.notification-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background-color: var(--background);
+  padding: 6px 8px;
+  margin: 10px;
+  border-radius: 8px;
+  box-shadow: 3px 3px 10px var(--tertiary);
+}
+.view-notifications {
+  text-decoration: none;
+  display: flex;
+  justify-content: flex-end;
+  color: var(--maincolor);
+  font-size: medium;
+  font-weight: bold;
+  margin: 10px;
+  padding-top: 10px;
+}
+.notice:target {
+  display: block;
+}
+
+.person-pic {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  box-shadow: 6px 7px 10px var(--tertiary);
+}
+.view-button {
+  padding-left: 8px;
+  padding-right: 8px;
+  background-color: var(--maincolor);
+  color: var(--backgroundTwo);
+  border: none;
+  border-radius: 12px;
+  font-size: medium;
+}
+.modal {
+  display: none;
+  position: fixed;
+  top: 70px;
+  right: 20px;
+  z-index: 1000;
+}
+
+.modal:target {
+  display: block;
+}
+
+.modal-content {
+  background: #fff;
+  padding: 20px;
+  border-radius: 15px;
+  width: 300px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+.close {
+  position: absolute;
+  right: 15px;
+  top: 10px;
+  font-size: 22px;
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+}
+/* .active2::after {
+  content: " 4";
+} */
+#info:target {
+  display: block;
+}
+.persone-info {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.title2 {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+div > h4 {
+  margin: 0;
+}
+.job {
+  margin: 0;
+  color: rgb(109, 109, 109);
+  font-size: medium;
+}
+div > img {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+}
+div > hr {
+  border: none;
+  height: 1px;
+  background-color: rgb(204, 203, 203);
+  margin: 10px auto;
+}
+/* End header styles */
+
+/* start navbar styles */
+
+nav {
+  background-color: var(--background);
+  box-shadow: 1px 3px 40px var(--tertiary);
+  position: fixed;
+  width: 200px;
+  top: 65px;
+  height: calc(100vh - 65px);
+  padding-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+ul {
+  padding: 0;
+  margin: 0;
+}
+li {
+  list-style: none;
+  margin-bottom: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+li > a {
+  text-decoration: none;
+  font-weight: medium;
+  padding: 10px 20px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 80%;
+  color: rgb(31, 31, 31);
+}
+a.active {
+  background-color: var(--maincolor);
+  color: var(--backgroundTwo);
+  box-shadow: 3px 3px 10px var(--tertiary);
+}
+.logout-btn {
+  text-decoration: none;
+  border: none;
+  background: none;
+  color: #ff5151;
+  margin-left: 12px;
+  font-weight: bold;
+  margin-bottom: 24px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-self: center;
+  gap: 8px;
+}
+.popup {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+.popup-content {
+  background-color: var(--backgroundTwo);
+  padding: 24px 20px;
+  border-radius: 10px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 10px;
+  position: absolute;
+  top: 30%;
+  left: 40%;
+  width: 350px;
+}
+.buttons > a {
+  text-decoration: none;
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  margin: 12px;
+}
+.cancel-btn {
+  background-color: var(--tertiary);
+  color: rgb(109, 109, 109);
+}
+.confirm {
+  background-color: #ff5151;
+  color: var(--backgroundTwo);
+}
+.popup-content > h3 {
+  margin-bottom: 6px;
+}
+.popup-content > img {
+  width: 60px;
+  height: 60px;
+  margin-top: 16px;
+}
+.popup-content > p {
+  text-align: center;
+  color: rgb(109, 109, 109);
+  margin-top: 0;
+  margin-bottom: 16px;
+}
+
+#logout:target {
+  display: block;
+}
+/* End navbar styles */
+/* start main styles */
+.settings-section {
+  margin-left: 220px;
+}
+.settings-form {
+  background: var(--background);
+  padding: 32px 28px;
+  border-radius: 16px;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.07);
+  width: 100%;
+  /* max-width: 540px; */
+  margin: 32px auto;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.settings-form fieldset {
+  border: 1px solid var(--tertiary);
+  border-radius: 10px;
+  padding: 18px 20px 14px 20px;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.settings-form legend {
+  font-weight: bold;
+  color: var(--maincolor);
+  padding: 0 8px;
+  font-size: 1.1em;
+}
+
+.settings-form label {
+  display: flex;
+  flex-direction: row;
+  font-size: 1em;
+  color: #222;
+  gap: 4px;
+}
+
+.settings-form input[type="text"],
+.settings-form input[type="email"],
+.settings-form input[type="tel"],
+.settings-form input[type="password"],
+.settings-form select {
+  padding: 8px 12px;
+  border: 1px solid var(--tertiary);
+  border-radius: 7px;
+  background: var(--backgroundTwo);
+  font-size: 1em;
+  margin-top: 2px;
+  transition: border-color 0.2s;
+}
+
+.settings-form input:focus,
+.settings-form select:focus {
+  border-color: var(--maincolor);
+  outline: none;
+}
+
+.settings-form input[type="checkbox"] {
+  margin-right: 8px;
+  accent-color: var(--maincolor);
+  width: 18px;
+  height: 18px;
+}
+
+.settings-form label input[type="checkbox"] {
+  display: inline-block;
+  width: auto;
+  margin-right: 8px;
+  vertical-align: middle;
+}
+.change-lang {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 1em;
+  color: #222;
+  font-weight: 500;
+}
+
+.change-lang select {
+  margin-left: 8px;
+  padding: 6px 12px;
+  border: 1px solid var(--tertiary);
+  border-radius: 7px;
+  background: var(--backgroundTwo);
+  font-size: 1em;
+  color: #222;
+  transition: border-color 0.2s;
+}
+
+.change-lang select:focus {
+  border-color: var(--maincolor);
+  outline: none;
+}
+.save-btn {
+  margin-top: 18px;
+  align-self: flex-end;
+  background: var(--maincolor);
+  color: var(--backgroundTwo);
+  border: none;
+  border-radius: 8px;
+  padding: 10px 28px;
+  font-size: 1.1em;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 2px 8px var(--tertiary);
+  transition: background 0.2s;
+}
+
+.save-btn:hover,
+.save-btn:focus {
+  background: #2176b6;
+}
+
+@media (max-width: 700px) {
+  .settings-section {
+    margin-left: 0;
+    padding: 0 8px;
+  }
+  .settings-form {
+    padding: 18px 8px;
+    max-width: 100%;
+  }
+}
+/* ################## */
+.security-section {
+  margin-left: 220px;
+}
+.security-form {
+  background: var(--background);
+  padding: 32px 28px;
+  border-radius: 16px;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.07);
+  width: 100%;
+  margin: 32px auto;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.security-form fieldset {
+  border: 1px solid var(--tertiary);
+  border-radius: 10px;
+  padding: 18px 20px 14px 20px;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.security-form legend {
+  font-weight: bold;
+  color: var(--maincolor);
+  padding: 0 8px;
+  font-size: 1.1em;
+}
+
+.security-form label {
+  display: flex;
+  align-items: center;
+  font-size: 1em;
+  color: #222;
+  gap: 8px;
+}
+
+.security-form input[type="checkbox"] {
+  accent-color: var(--maincolor);
+  width: 18px;
+  height: 18px;
+  margin-right: 8px;
+}
+
+.security-form .desc {
+  color: #666;
+  font-size: 0.98em;
+  margin: 0 0 0 26px;
+}
+
+.login-activity {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 10px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.login-activity li {
+  background: var(--backgroundTwo);
+  border-radius: 7px;
+  padding: 10px 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  box-shadow: 0 2px 8px var(--tertiary);
+}
+
+.login-activity span {
+  font-weight: 500;
+  color: #222;
+}
+
+.login-activity small {
+  color: #888;
+  font-size: 0.93em;
+}
+
+.logout-other-sessions {
+  margin-top: 10px;
+  background: #ff5151;
+  color: var(--backgroundTwo);
+  border: none;
+  border-radius: 8px;
+  padding: 8px 18px;
+  font-size: 1em;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 2px 8px var(--tertiary);
+  transition: background 0.2s;
+}
+
+.logout-other-sessions:hover,
+.logout-other-sessions:focus {
+  background: #d43c3c;
+}
+
+.delete-account-section {
+  margin-left: 220px;
+  background: var(--background);
+  padding: 32px 28px;
+  border-radius: 16px;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.07);
+  width: 100%;
+  margin-top: 32px;
+  margin-bottom: 32px;
+}
+
+.delete-account-section h2 {
+  color: #ff5151;
+  margin-bottom: 10px;
+}
+
+.delete-account-section .warning {
+  color: #ff5151;
+  background: #fff0f0;
+  border: 1px solid #ffb3b3;
+  border-radius: 8px;
+  padding: 12px 16px;
+  margin-bottom: 18px;
+  font-weight: 500;
+}
+
+.delete-account-form {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.delete-btn {
+  background: #ff5151;
+  color: var(--backgroundTwo);
+  border: none;
+  border-radius: 8px;
+  padding: 10px 28px;
+  font-size: 1.1em;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 2px 8px var(--tertiary);
+  transition: background 0.2s;
+}
+
+.delete-btn:hover,
+.delete-btn:focus {
+  background: #d43c3c;
+}
+
+@media (max-width: 700px) {
+  .security-section,
+  .delete-account-section {
+    margin-left: 0;
+    padding: 0 8px;
+  }
+  .security-form,
+  .delete-account-section {
+    padding: 18px 8px;
+    max-width: 100%;
+  }
+}
+
+/* End main styles */
